@@ -204,7 +204,7 @@ export const createServer = (
       auth_time: now,
       iat: now,
       token_use: "id",
-      "custom:tenant_id": uuid.v4(),
+      "custom:tenant_id": userPoolClient.ClientId,
     };
 
     res.status(200).json({
